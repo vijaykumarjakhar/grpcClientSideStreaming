@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServerService";
+
+package greet;
+
+// The greeting service definition.
+service AverageNumber {
+  // Sends a greeting
+  rpc GetAverageNumber (stream AverageNumberRequest) returns (AverageNumberResponse);
+}
+
+// The request message containing the user's name.
+message AverageNumberRequest {
+  int32 number = 1;
+}
+
+// The response message containing the greetings.
+message AverageNumberResponse {
+  string result = 1;
+}
