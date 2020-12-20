@@ -24,7 +24,7 @@ namespace GrpcServerService
                 Console.WriteLine("Number found {0}", requestStream.Current.Number);
                 holdNumber.Add(requestStream.Current.Number);
             }
-            Console.WriteLine(holdNumber.Average().ToString());
+            Console.WriteLine("Average of Number "+holdNumber.Average().ToString());
             return  new AverageNumberResponse() { Result = holdNumber.Average().ToString()};
         }
 
